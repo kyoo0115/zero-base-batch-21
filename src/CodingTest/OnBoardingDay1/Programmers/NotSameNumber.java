@@ -1,4 +1,4 @@
-package OnBoardingDay1.Programmers;
+package CodingTest.OnBoardingDay1.Programmers;
 
 import java.util.*;
 // 프로그래머스 같은 숫자는 싫어
