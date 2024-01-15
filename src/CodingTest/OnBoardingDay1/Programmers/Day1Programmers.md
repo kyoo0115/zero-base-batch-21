@@ -9,7 +9,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/12906?language=java
 <img src="./images/NotSameNumQuestion.png" width="768">
 
 ## 제한 사항
-<img src="./images/NotSameNumRestrictions.png" width="768">
+<img src="./images/NotSameNumRestrictions.png" width="589">
 
 ## 풀이
 
