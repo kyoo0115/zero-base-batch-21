@@ -1,59 +1,38 @@
 package CodingTest.OnBoardingDay1.BOJ;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class FourStack {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(reader.readLine());
+        int[] arr = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-        int n = scanner.nextInt();
-        int[] permutation = new int[n];
-        for (int i = 0; i < n; i++) {
-            permutation[i] = scanner.nextInt();
-        }
-
-        System.out.println(cleanPermutation(n, permutation) ? "YES" : "NO");
-    }
-
-    private static boolean cleanPermutation(int n, int[] permutation) {
         Stack<Integer>[] stacks = new Stack[4];
+
         for (int i = 0; i < 4; i++) {
             stacks[i] = new Stack<>();
+            stacks[i].push(0);
         }
 
-        int[] result = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            int current = permutation[i];
-            int stackIndex = 0;
-
-            // 현재 숫자보다 크거나 같은 스택을 찾음
-            for (int j = 1; j < 4; j++) {
-                if (!stacks[j].isEmpty() && stacks[j].peek() < stacks[stackIndex].peek()) {
-                    stackIndex = j;
+        for(int i = 0; i < n; i++) {
+            boolean flag = false;
+            for(int j = 0; j < 4; j++) {
+                if(stacks[j].peek() < arr[i]) {
+                    stacks[j].push(arr[i]);
+                    flag = true;
+                    break;
                 }
             }
-
-            // 스택에 삽입
-            stacks[stackIndex].push(current);
-        }
-
-        // 스택에서 숫자를 꺼내어 배열에 저장
-        int index = n - 1;
-        for (int i = 0; i < 4; i++) {
-            while (!stacks[i].isEmpty() && index >= 0) {
-                result[index--] = stacks[i].pop();
+            if(!flag) {
+                System.out.println("NO");
+                return;
             }
         }
-
-        // 배열에 저장된 숫자가 오름차순인지 확인
-        for (int i = 0; i < n - 1; i++) {
-            if (result[i] > result[i + 1]) {
-                return false;
-            }
-        }
-
-        return true;
+        System.out.println("YES");
     }
 }
