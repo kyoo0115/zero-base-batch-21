@@ -32,7 +32,6 @@ public class Josephus {
             prev = prev.next;
         }
 
-        // Make the list circular
         prev.next = head;
 
         Node node = head;
