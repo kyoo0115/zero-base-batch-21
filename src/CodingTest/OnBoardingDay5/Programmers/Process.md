@@ -5,13 +5,13 @@
 
 ## 문제
 
-hhttps://school.programmers.co.kr/learn/courses/30/lessons/42587
+https://school.programmers.co.kr/learn/courses/30/lessons/42587
 
 <img src="./images/ProcessQuestion.png" width="1356">
 
 ## 제한 사항 및 입출력 예제
 
-<img src="./images/ProcessRestrictions.png" width="1334">
+<img src="./images/ProcessRestrictions.png" width="1336">
 
 ## 접근 방법
 
