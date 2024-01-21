@@ -5,7 +5,7 @@
 
 ## 문제
 
-https://www.acmicpc.net/problem/1158
+https://www.acmicpc.net/problem/1158 [실버 4]
 
 <img src="./images/JosephusQuestion.png" width="1356">
 
@@ -85,8 +85,8 @@ public class Josephus {
 
 ## 시간 복잡도
 
-- 원형 연결 리스트를 생성하는 데에는 <b>O(N)</b> 시간이 소요됩니다. 여기서 N은 사람의 수입니다.  
-그 후에는 K번째 사람을 제거하는 연산을 N번 반복하므로, 이 연산은 <b>O(NK)</b> 시간이 소요됩니다.
+- 원형 연결 리스트를 생성하는 데에는 <b>O(N)</b> 시간이 소요 됩니다. 여기서 N은 사람의 수 입니다.  
+그 후에는 K번째 사람을 제거하는 연산을 N번 반복하므로, 이 연산은 <b>O(NK)</b> 시간이 소요 됩니다.
 
 ## 공간 복잡도
 
